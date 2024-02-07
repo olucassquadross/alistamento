@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos</title>
-    <style>
-        
-    </style>
 </head>
 <body>
-    
+
     <form id="formItem">
         <label>Digite a sua idade: </label>
         <input type="number" id="idade" />
@@ -19,7 +16,8 @@
         <input type="number" id="altura" />
         <br>
         <br>
-        <button onclick="calcular()" type="button" id="CalcularButton">Calcular</button>
+        <button onclick="calcular()" type="button">Calcular</button>
+        <button onclick="limparCampos()" type="button">Limpar</button>
     </form>
 
     <p id="resultado"></p>
@@ -34,6 +32,12 @@
             } else {
                 document.getElementById('resultado').innerHTML = 'Não Alistado';
             }
+        }
+
+        function limparCampos() {
+            document.getElementById('idade').value = '';
+            document.getElementById('altura').value = '';
+            document.getElementById('resultado').innerHTML = '';
         }
     </script>
 </body>
